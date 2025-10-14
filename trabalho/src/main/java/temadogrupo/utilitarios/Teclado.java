@@ -77,17 +77,19 @@ public class Teclado {
     }
 
     /**
-     * Lê uma data no formato yyyy-MM-dd (ex: 2025-07-24).
+     * Lê uma data no formato yyyy-MM-dd (ex: 2025-07-24). mudei abaixo
      * Repete até o usuário digitar um formato válido.
      */
+
     public static LocalDate readDate() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                                                       //DateTimeFormatter.ofPattern("yyyy-MM-dd");
         while (true) {
             String entrada = readString();
             try {
                 return LocalDate.parse(entrada, formatter);
             } catch (DateTimeParseException e) {
-                System.out.println("Data inválida! Use o formato AAAA-MM-DD.");
+                System.out.println("Data inválida! Use o formato dd/MM/yyyy.");
             }
         }
     }
