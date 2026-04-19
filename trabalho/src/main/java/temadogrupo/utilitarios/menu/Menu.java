@@ -1,9 +1,8 @@
-package temadogrupo.menu;
+package temadogrupo.utilitarios.menu;
 
 import java.util.ArrayList;
 import temadogrupo.utilitarios.Teclado;
 import temadogrupo.utilitarios.Video;
-
 
 public class Menu {
     private String titulo;
@@ -27,17 +26,17 @@ public class Menu {
 
         int opcaoEscolhida;
 
-        do {            
-            opcaoEscolhida = Teclado.readInt("Qual a sua opcao: "); 
+        do {
+            opcaoEscolhida = Teclado.readInt("Qual a sua opcao: ");
             if (opcaoEscolhida < 1 || opcaoEscolhida > opcoesMenu.size()) {
                 Video.mensagemAlerta("Opcao invalida, tente novamente!");
-            }            
-        } while (opcaoEscolhida < 1 || opcaoEscolhida > opcoesMenu.size());        
+            }
+        } while (opcaoEscolhida < 1 || opcaoEscolhida > opcoesMenu.size());
 
         return opcaoEscolhida;
     }
 
-    public static int exibirExemplo() { //usar como static em uma classe de menus
+    public static int exibirExemplo() { // usar como static em uma classe de menus
         ArrayList<String> opcoes = new ArrayList<>();
         opcoes.add("Opcao 1");
         opcoes.add("Opcao 2");
@@ -46,20 +45,21 @@ public class Menu {
         return menu.exibir();
     }
 
-    /*Na App 
+    /*
+     * Na App
      * 
      * int opcaoPrincipal;
-
-            do {
-                opcaoPrincipal = MenuPrincipal.exibir();
-
-                switch (opcaoPrincipal) {
-                    case 1 -> {
-                     ...
-                    }
-                ...
-            ...
-     *  
-    */
+     * 
+     * do {
+     * opcaoPrincipal = MenuPrincipal.exibir();
+     * 
+     * switch (opcaoPrincipal) {
+     * case 1 -> {
+     * ...
+     * }
+     * ...
+     * ...
+     * 
+     */
 
 }

@@ -1,4 +1,4 @@
-package temadogrupo.menu;
+package temadogrupo.utilitarios.menu;
 
 import java.util.ArrayList;
 
@@ -15,4 +15,3 @@ public class MenuPessoa {
         return menu.exibir();
     }
 }
-

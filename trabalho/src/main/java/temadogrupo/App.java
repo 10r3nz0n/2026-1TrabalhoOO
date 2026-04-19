@@ -1,16 +1,16 @@
 package temadogrupo;
 
 import temadogrupo.utilitarios.*;
-import temadogrupo.menu.*;
+import temadogrupo.utilitarios.menu.*;
 
 public class App {
 
-    public static void iniciar(){
-        
+    public static void iniciar() {
+
         Video.mensagem("Carregando...");
         Video.barraProgresso(50, 15);
         Video.limparTela();
-        Video.cabecalho ("Nossa aplicação!");
+        Video.cabecalho("Nossa aplicação!");
     }
 
     public static void main(String[] args) {
@@ -26,16 +26,16 @@ public class App {
                     int opcaoPessoa;
                     do {
                         opcaoPessoa = MenuPessoa.exibir();
-                        switch (opcaoPessoa) { //sem break, com uso de ->
-                            case 1 -> { 
+                        switch (opcaoPessoa) { // sem break, com uso de ->
+                            case 1 -> {
 
-                            }                            
+                            }
                         }
                     } while (opcaoPessoa != 5);
-                }                      
+                }
             }
         } while (opcaoPrincipal != 3);
 
         Video.mensagemInfo("Saindo do sistema...");
-    }  
+    }
 }
